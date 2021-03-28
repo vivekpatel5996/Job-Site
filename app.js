@@ -6,7 +6,7 @@ var cookieParser = require('cookie-parser');
 var companyRouter = require('./routes/company');
 var studentRouter = require('./routes/students');
 var jobRouter = require('./routes/jobs');
-
+var jobApplicantRouter = require('./routes/jobApplicant');
 var app = express();
 
 
@@ -18,6 +18,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/company', companyRouter);
 app.use('/student', studentRouter);
 app.use('/job', jobRouter);
+app.use('/job_applicant', jobApplicantRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
