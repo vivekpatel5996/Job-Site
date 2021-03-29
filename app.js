@@ -7,6 +7,10 @@ var companyRouter = require('./routes/company');
 var studentRouter = require('./routes/students');
 var jobRouter = require('./routes/jobs');
 var jobApplicantRouter = require('./routes/jobApplicant');
+var collegeRouter = require('./routes/college');
+var degreeRouter = require('./routes/degree');
+var fieldOfStudyRouter = require('./routes/fieldOfStudy');
+
 var app = express();
 
 
@@ -19,6 +23,9 @@ app.use('/company', companyRouter);
 app.use('/student', studentRouter);
 app.use('/job', jobRouter);
 app.use('/job_applicant', jobApplicantRouter);
+app.use('/college', collegeRouter);
+app.use('/degree', degreeRouter);
+app.use('/field_of_study', fieldOfStudyRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
